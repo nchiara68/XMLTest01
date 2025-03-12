@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<FatturaElettronica>
+  <FatturaElettronicaHeader>
+    <DatiTrasmissione>
+      <IdTrasmittente>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>3298624219</IdCodice>
+      </IdTrasmittente>
+      <ProgressivoInvio>400</ProgressivoInvio>
+      <FormatoTrasmissione>FPR12</FormatoTrasmissione>
+      <CodiceDestinatario>1</CodiceDestinatario>
+    </DatiTrasmissione>
+    <CedentePrestatore>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>3298624219</IdCodice>
+        </IdFiscaleIVA>
+        <Anagrafica>
+          <Denominazione>Fusion Solutions</Denominazione>
+        </Anagrafica>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Viale Verdi  120</Indirizzo>
+        <CAP>10100</CAP>
+        <Comune>Torino</Comune>
+        <Provincia>TO</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CedentePrestatore>
+    <CessionarioCommittente>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>3834390636</IdFiscaleIVA>
+        <Denominazione>Hosting Company</Denominazione>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Via Versilia 34</Indirizzo>
+        <CAP>90174</CAP>
+        <Comune>Palermo</Comune>
+        <Provincia>PA</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CessionarioCommittente>
+  </FatturaElettronicaHeader>
+  <FatturaElettronicaBody>
+    <DatiGenerali>
+      <DatiGeneraliDocumento>
+        <TipoDocumento>TD01</TipoDocumento>
+        <Divisa>EUR</Divisa>
+        <Data>2025-03-11 00:00:00</Data>
+        <Causale>400/ 2025</Causale>
+        <Numero>prodotti informatici</Numero>
+        <ImportoTotaleDocumento>2440</ImportoTotaleDocumento>
+      </DatiGeneraliDocumento>
+    </DatiGenerali>
+    <DatiBeniServizi>
+      <DettaglioLinee>
+        <NumeroLinea>400</NumeroLinea>
+        <Descrizione>Servizi &amp; Prodotti informatici</Descrizione>
+        <Quantita>4</Quantita>
+        <PrezzoUnitario>500</PrezzoUnitario>
+        <PrezzoTotale>2000</PrezzoTotale>
+        <AliquotaIVA>22</AliquotaIVA>
+      </DettaglioLinee>
+      <DatiRiepilogo>
+        <AliquotaIVA>22</AliquotaIVA>
+        <ImponibileImporto>2000</ImponibileImporto>
+        <Imposta>440</Imposta>
+      </DatiRiepilogo>
+    </DatiBeniServizi>
+    <DatiPagamento>
+      <CondizioniPagamento>TP01</CondizioniPagamento>
+      <DettaglioPagamento>
+        <ModalitaPagamento>MP01</ModalitaPagamento>
+        <DataScadenzaPagamento>2025-05-10 00:00:00</DataScadenzaPagamento>
+        <ImportoPagamento>2440</ImportoPagamento>
+      </DettaglioPagamento>
+    </DatiPagamento>
+  </FatturaElettronicaBody>
+</FatturaElettronica>

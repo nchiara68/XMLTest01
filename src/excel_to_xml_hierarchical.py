@@ -1,3 +1,4 @@
+from datetime import datetime  # Import for date formatting
 import pandas as pd
 import os
 import xml.etree.ElementTree as ET
@@ -18,8 +19,23 @@ def create_nested_element(root, path, value):
     current_element.text = str(value) if pd.notna(value) else ""
 
 # Function to create hierarchical XML from DataFrame row
+# Modified function to create hierarchical XML with custom filename format
 def create_xml_from_row(row, output_folder, index):
     root = ET.Element("FatturaElettronica")
+
+    # Extract specific fields for filename
+    name_field = row.get('FatturaElettronicaHeader_CedentePrestatore_DatiAnagrafici_Anagrafica_Denominazione', 'UnknownName')
+    date_field = row.get('FatturaElettronicaBody_DatiGenerali_DatiGeneraliDocumento_Data', 'UnknownDate')
+
+    # Clean values to ensure valid filenames
+    safe_name = str(name_field).replace(" ", "_").replace("/", "-").replace(":", "-")
+
+    # Format date to remove time component
+    try:
+        date_obj = datetime.strptime(str(date_field), "%Y-%m-%d %H:%M:%S")
+        safe_date = date_obj.strftime("%Y-%m-%d")  # Format without time
+    except ValueError:
+        safe_date = str(date_field)  # Use as-is if format is already correct
 
     for col, value in row.items():
         create_nested_element(root, col, value)
@@ -28,8 +44,8 @@ def create_xml_from_row(row, output_folder, index):
     xml_str = ET.tostring(root, encoding='utf-8')
     pretty_xml = parseString(xml_str).toprettyxml(indent="  ")
 
-    # Save each XML file
-    xml_file = os.path.join(output_folder, f"Invoice_{index + 1}.xml")
+    # Save each XML file with new filename format
+    xml_file = os.path.join(output_folder, f"Invoice_{index + 1}_{safe_name}-{safe_date}.xml")
     with open(xml_file, "w", encoding='utf-8') as f:
         f.write(pretty_xml)
 

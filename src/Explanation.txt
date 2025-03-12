@@ -1,0 +1,4 @@
+Use XMLList-Extended.xlsx as the MASTER sheet for the 5 (supplier)*10 Invoices
+Copy and Paste table in XMLList-Extended.xlsx onto XML_Target.xlsx
+Run excel_to_xml_hierarchical.py to drop in the XML_TEST folder 50 xlm Invoices
+(Optional) use xml_to_excel-02.py to create a excel table from xml files

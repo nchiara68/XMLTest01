@@ -5,8 +5,6 @@ node_modules/
 .vscode/
 
 # Environment variables
-.env
-.env.local
 .env.*.local
 
 # Logs
@@ -58,3 +56,4 @@ __pycache__/
 
 # Ignore the XML_TEST folder and its contents
 /src/XML_TEST/
+config.bat

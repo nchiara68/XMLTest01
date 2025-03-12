@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<FatturaElettronica>
+  <FatturaElettronicaHeader>
+    <DatiTrasmissione>
+      <IdTrasmittente>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>8333741271</IdCodice>
+      </IdTrasmittente>
+      <ProgressivoInvio>507</ProgressivoInvio>
+      <FormatoTrasmissione>FPR12</FormatoTrasmissione>
+      <CodiceDestinatario>1</CodiceDestinatario>
+    </DatiTrasmissione>
+    <CedentePrestatore>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>8333741271</IdCodice>
+        </IdFiscaleIVA>
+        <Anagrafica>
+          <Denominazione>Quantum Corp</Denominazione>
+        </Anagrafica>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Largo Mazzini  35</Indirizzo>
+        <CAP>80100</CAP>
+        <Comune>Napoli</Comune>
+        <Provincia/>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CedentePrestatore>
+    <CessionarioCommittente>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>3834390653</IdFiscaleIVA>
+        <Denominazione>Hosting Company</Denominazione>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Via Versilia 51</Indirizzo>
+        <CAP>90191</CAP>
+        <Comune>Palermo</Comune>
+        <Provincia>PA</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CessionarioCommittente>
+  </FatturaElettronicaHeader>
+  <FatturaElettronicaBody>
+    <DatiGenerali>
+      <DatiGeneraliDocumento>
+        <TipoDocumento>TD01</TipoDocumento>
+        <Divisa>EUR</Divisa>
+        <Data>2025-03-11 00:00:00</Data>
+        <Causale>507/ 2025</Causale>
+        <Numero>prodotti informatici</Numero>
+        <ImportoTotaleDocumento>1830</ImportoTotaleDocumento>
+      </DatiGeneraliDocumento>
+    </DatiGenerali>
+    <DatiBeniServizi>
+      <DettaglioLinee>
+        <NumeroLinea>507</NumeroLinea>
+        <Descrizione>Servizi &amp; Prodotti informatici</Descrizione>
+        <Quantita>3</Quantita>
+        <PrezzoUnitario>500</PrezzoUnitario>
+        <PrezzoTotale>1500</PrezzoTotale>
+        <AliquotaIVA>22</AliquotaIVA>
+      </DettaglioLinee>
+      <DatiRiepilogo>
+        <AliquotaIVA>22</AliquotaIVA>
+        <ImponibileImporto>1500</ImponibileImporto>
+        <Imposta>330</Imposta>
+      </DatiRiepilogo>
+    </DatiBeniServizi>
+    <DatiPagamento>
+      <CondizioniPagamento>TP01</CondizioniPagamento>
+      <DettaglioPagamento>
+        <ModalitaPagamento>MP01</ModalitaPagamento>
+        <DataScadenzaPagamento>2025-05-10 00:00:00</DataScadenzaPagamento>
+        <ImportoPagamento>1830</ImportoPagamento>
+      </DettaglioPagamento>
+    </DatiPagamento>
+  </FatturaElettronicaBody>
+</FatturaElettronica>
